@@ -1,0 +1,37 @@
+<?xml version="1.0" ?>
+<?xml-stylesheet type='text/xsl' href='interface.xsl'?>
+<interface uri="https://raw.githubusercontent.com/kyleparrott/mspdebug/master/mspdebug.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>mspdebug</name>
+  <summary>Debugging tool for MSP430's</summary>
+
+  <!-- Optionally, uncomment this to specify the program's homepage: -->
+  <homepage>http://dlbeer.co.nz/mspdebug/</homepage>
+
+    <requires interface="https://raw.githubusercontent.com/kyleparrott/libmsp430/libmsp430.xml">
+        <environment insert="lib" mode="prepend" name="LD_LIBRARY_PATH"/>
+    </requires>
+
+    <group arch="MacOSX-*" main="mspdebug">
+        <implementation id="sha1=57d7dfc6a2a17b432476dbf24986b04f2f9c50ab" version="0.0">
+            <archive href="https://raw.githubusercontent.com/kyleparrott/mspdebug/master/macos/mspdebug.zip" size="177567"/>
+        </implementation>
+    </group>
+    <group arch="Linux-*" main="mspdebug">
+         <implementation id="sha1=12b661b93801580836997b2488e4bcaed7968f6e" version="0.0">
+             <archive href="https://raw.githubusercontent.com/kyleparrott/mspdebug/master/linux/mspdebug.zip" size="107451"/>
+        </implementation>
+    </group>
+</interface>
+<!-- Base64 Signature
+iQIcBAABCgAGBQJX7fBRAAoJEJzS+Pb4kyScPJwQAJB4RarLWB8FJJwnR7pMX417ksIyLoqL3MVm
+hAzV3vphVNP/IKTYoumvEayp44q7qgJRLr9EgnzMWZ/8Da6zJVFZFGhtVuXdMcZDuCs9m5IbCkHc
+ZDZ6nTyvS2kHjbRKsAIgoiAnAF+RdRFz+jSkcXvXgLAPK8Rfc1kybuO6RN6nSuXljqd2yJ45if+B
+qqPoWFFIziT4MshU29Y4E1vCJGTo2VAHDZgsurxiuomdvNmlsvIGMSzSV2NqjaGF2nPoRYHw4mbF
+BaQQxs7UpRsCkASnJP5FNTZ6PftSCBmrn60e/NcGSndBj0HRfo4RTMOZq9MjKwnLOJhxrJr7Pb/q
+3hGLqV01ODY3BNSVOSADWkaJEKHlbY0trzpNKPeESOr5npDwhaS8dcFK7B9SfSoPmLlHlJ9Fv8Zf
+JQugjt892zxA3icK4mrufVCiaqjm9Mv5kU6guZoff2F7oWlakxEJxQbOXzjhwUUI6sCeT8Fisdqi
+nBUgcMhz7sPLkpu+5oCAR1ul/D8V2Cy3I7v37tZiKw4JOx8QvBksHj9pYezz6E8c7WgIjifjcc5m
+sYEStwJcVW5bP+Qw1OIZ6YTn2Micu9V+7wAU/eDvgOLb6zmY4Y2MV4k6k5R5qlhhi/VxvzHNM8W6
+OwRXlsWL9mBs4VknZD+Qfxcplu7oHuGu9VpbHDvw
+
+-->
