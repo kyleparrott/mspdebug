@@ -1,37 +1,38 @@
 <?xml version="1.0" ?>
 <?xml-stylesheet type='text/xsl' href='interface.xsl'?>
 <interface uri="https://raw.githubusercontent.com/kyleparrott/mspdebug/master/mspdebug.xml" xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
-  <name>mspdebug</name>
-  <summary>Debugging tool for MSP430's</summary>
+    <name>mspdebug</name>
+    <summary>Debugging tool for MSP430's</summary>
 
-  <!-- Optionally, uncomment this to specify the program's homepage: -->
-  <homepage>http://dlbeer.co.nz/mspdebug/</homepage>
+    <!-- Optionally, uncomment this to specify the program's homepage: -->
+    <homepage>http://dlbeer.co.nz/mspdebug/</homepage>
 
-    <requires interface="https://raw.githubusercontent.com/kyleparrott/libmsp430/libmsp430.xml">
-        <environment insert="lib" mode="prepend" name="LD_LIBRARY_PATH"/>
-    </requires>
-
-    <group arch="MacOSX-*" main="mspdebug">
-        <implementation id="sha1=57d7dfc6a2a17b432476dbf24986b04f2f9c50ab" version="0.0">
-            <archive href="https://raw.githubusercontent.com/kyleparrott/mspdebug/master/macos/mspdebug.zip" size="177567"/>
-        </implementation>
-    </group>
-    <group arch="Linux-*" main="mspdebug">
-         <implementation id="sha1=12b661b93801580836997b2488e4bcaed7968f6e" version="0.0">
-             <archive href="https://raw.githubusercontent.com/kyleparrott/mspdebug/master/linux/mspdebug.zip" size="107451"/>
-        </implementation>
+    <group main="mspdebug">
+        <requires interface="https://raw.githubusercontent.com/kyleparrott/libmsp430/master/libmsp430.xml">
+            <environment insert="" mode="prepend" name="LD_LIBRARY_PATH"/>
+        </requires>
+        <group arch="MacOSX-*">
+            <implementation id="sha1=57d7dfc6a2a17b432476dbf24986b04f2f9c50ab" version="0.0">
+                <archive href="https://raw.githubusercontent.com/kyleparrott/mspdebug/master/macos/mspdebug.zip" size="177567"/>
+            </implementation>
+        </group>
+        <group arch="Linux-*">
+            <implementation id="sha1=12b661b93801580836997b2488e4bcaed7968f6e" version="0.0">
+                 <archive href="https://raw.githubusercontent.com/kyleparrott/mspdebug/master/linux/mspdebug.zip" size="107451"/>
+            </implementation>
+        </group>
     </group>
 </interface>
 <!-- Base64 Signature
-iQIcBAABCgAGBQJX7fBRAAoJEJzS+Pb4kyScPJwQAJB4RarLWB8FJJwnR7pMX417ksIyLoqL3MVm
-hAzV3vphVNP/IKTYoumvEayp44q7qgJRLr9EgnzMWZ/8Da6zJVFZFGhtVuXdMcZDuCs9m5IbCkHc
-ZDZ6nTyvS2kHjbRKsAIgoiAnAF+RdRFz+jSkcXvXgLAPK8Rfc1kybuO6RN6nSuXljqd2yJ45if+B
-qqPoWFFIziT4MshU29Y4E1vCJGTo2VAHDZgsurxiuomdvNmlsvIGMSzSV2NqjaGF2nPoRYHw4mbF
-BaQQxs7UpRsCkASnJP5FNTZ6PftSCBmrn60e/NcGSndBj0HRfo4RTMOZq9MjKwnLOJhxrJr7Pb/q
-3hGLqV01ODY3BNSVOSADWkaJEKHlbY0trzpNKPeESOr5npDwhaS8dcFK7B9SfSoPmLlHlJ9Fv8Zf
-JQugjt892zxA3icK4mrufVCiaqjm9Mv5kU6guZoff2F7oWlakxEJxQbOXzjhwUUI6sCeT8Fisdqi
-nBUgcMhz7sPLkpu+5oCAR1ul/D8V2Cy3I7v37tZiKw4JOx8QvBksHj9pYezz6E8c7WgIjifjcc5m
-sYEStwJcVW5bP+Qw1OIZ6YTn2Micu9V+7wAU/eDvgOLb6zmY4Y2MV4k6k5R5qlhhi/VxvzHNM8W6
-OwRXlsWL9mBs4VknZD+Qfxcplu7oHuGu9VpbHDvw
+iQIcBAABCgAGBQJX82PVAAoJEJzS+Pb4kyScnAQQAIEXLcHTakyUqgxpfDK0gi6ULfdSgBF/9b6k
+ByEmYPgrgAUGfnDJc8/ypPj5SmkhRSY8RqtmKLdpwQUgGMANjFtTLNUhfXjo33VpeaaoEk96QOJ0
+2z+ClBZvOaMF7kVxlHREJespDvlPSWQKP6V92ejs9BLgHDAIN8wP8gTD4sdnqw8we2CYXR2g5VoU
+65tvZEIlyQpKXrSvL26Tqbiqi74XhGhs1OgFFqGIgnMNgHIv6UFMKMbFHBf8Wiz93IcM1FLzBuVW
+n4sbuimTxy7ZYJdGsB1xI4ANyKz+8kMphKM+QasBGfOIOGPBnFhQNxCdCJUM9GLbQMPU5uBxT6d+
+5oP9xiV5fFrcpnf4Te78xFllR3PJIm8LaVB9l1QbphwJgOlD4dxYNZw0pPW1lDORHEZOjMq0ApMa
+ftpJBWdKnaoQtEK/Bo1CF+uNpDzItgCRTwDpGO+gMheYgtcgWJ8EzcRtEk77ghb33HoGbwdd4EQ0
+AIxdO1ldf6OmL+G6Kj8VAeQwLtEr1nYlswUnaoKkGE/ONSgba6y85Bqqm18fk2xdzDNGwXDO1bn1
+v1CGXeUG1cPI0QFE62VCBaSv3xk0StVWHiaN7S28876GbGAevauHZ4cL0a2RlxjU0NunLMwDVshz
+KUfaVZaQikN0y1D0ELAYO5R12QVtiXWR4av71jSw
 
 -->
